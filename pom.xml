@@ -22,7 +22,8 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <alibaba.nacos.version>2.0.3</alibaba.nacos.version>
         <spring-boot-admin.version>2.5.4</spring-boot-admin.version>
-        <spring-boot.mybatis>2.2.0</spring-boot.mybatis>
+<!--        <spring-boot.mybatis>2.2.0</spring-boot.mybatis>-->
+        <mybatis-plus.version>3.5.0</mybatis-plus.version>
         <swagger.fox.version>3.0.0</swagger.fox.version>
         <swagger.core.version>1.6.2</swagger.core.version>
         <tobato.version>1.27.2</tobato.version>
@@ -41,6 +42,7 @@
         <commons-collections.version>3.2.2</commons-collections.version>
         <transmittable-thread-local.version>2.12.2</transmittable-thread-local.version>
         <log4j2.version>2.17.1</log4j2.version>
+        <hutool.version>5.7.14</hutool.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -95,11 +97,18 @@
                 <version>${tobato.version}</version>
             </dependency>
 
-            <!-- Mybatis 依赖配置 -->
+<!--            &lt;!&ndash; Mybatis 依赖配置 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>org.mybatis.spring.boot</groupId>-->
+<!--                <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--                <version>${spring-boot.mybatis}</version>-->
+<!--            </dependency>-->
+
+            <!-- Mybatis-Plus 依赖配置 -->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${spring-boot.mybatis}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!-- Swagger 依赖配置 -->
@@ -258,6 +267,12 @@
                 <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-api-system</artifactId>
                 <version>${ruoyi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
         </dependencies>
